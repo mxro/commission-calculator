@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Commission Calculator</title>
+</head>
+<body>
+	<h1>Commission Calculator</h1>
+	<form action="#" th:action="@{/calculate}" th:object="${request}"
+		method="post">
+		<p>
+			Actual: <input type="text" th:field="*{actual}" />
+		</p>
+		<p>
+			Target: <input type="text" th:field="*{target}" />
+		</p>
+		<p>
+			MOTC: <input type="text" th:field="*{motc}" />
+		</p>
+		<p>
+			<input type="submit" value="Submit" />
+		</p>
+	</form>
+</body>
+</html>
