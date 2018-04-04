@@ -16,7 +16,7 @@ import de.mxro.commissioncalculator.service.CommissionCalculationService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { AppConfig.class })
-public class CalculateCommissionsTests {
+public class CalculateCommissionsTest {
 
 	@Autowired
 	CommissionCalculationService service;
