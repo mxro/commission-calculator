@@ -2,6 +2,8 @@ package de.mxro.commissioncalculator.service;
 
 import java.math.BigDecimal;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import de.mxro.commissioncalculator.dao.RangeDao;
@@ -16,11 +18,10 @@ public class CommissionCalculationServiceImpl implements CommissionCalculationSe
 
 	@Override
 	public Commission calculateCommission(Request request) {
-
+			
 		double achievement = (double) request.getActual() / (double) request.getTarget();
 		
 		Range matchingRange = range.findRangeByAchievement(achievement);
-		
 		
 		double base = matchingRange.getBase().doubleValue();
 		double start = matchingRange.getStart().doubleValue();
@@ -29,7 +30,6 @@ public class CommissionCalculationServiceImpl implements CommissionCalculationSe
 		Double commissionRate = base
 				+ ((achievement - start)
 						* rate);
-		
 		
 		Commission commission = new Commission();
 
@@ -41,8 +41,9 @@ public class CommissionCalculationServiceImpl implements CommissionCalculationSe
 
 		return commission;
 	}
-
-	public CommissionCalculationServiceImpl(RangeDao range) {
+	
+	@Autowired
+	public CommissionCalculationServiceImpl(@Qualifier("hsql") RangeDao range) {
 		super();
 		this.range = range;
 	}

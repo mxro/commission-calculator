@@ -39,5 +39,12 @@ public class Request {
 		request.motc = BigDecimal.valueOf(motc);
 		return request;
 	}
+
+	@Override
+	public String toString() {
+		return "Request [target=" + target + ", actual=" + actual + ", motc=" + motc + "]";
+	}
+	
+	
 	
 }

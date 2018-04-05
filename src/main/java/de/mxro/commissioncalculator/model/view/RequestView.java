@@ -3,7 +3,7 @@ package de.mxro.commissioncalculator.model.view;
 import java.math.BigDecimal;
 
 public class RequestView {
-
+	
 	private int target;
 	private int actual;
 	private BigDecimal motc;
@@ -39,5 +39,12 @@ public class RequestView {
 		request.motc = BigDecimal.valueOf(motc);
 		return request;
 	}
+
+	@Override
+	public String toString() {
+		return "RequestView [target=" + target + ", actual=" + actual + ", motc=" + motc + "]";
+	}
+	
+	
 	
 }

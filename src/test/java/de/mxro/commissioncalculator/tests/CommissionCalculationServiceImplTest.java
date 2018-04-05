@@ -67,7 +67,22 @@ public class CommissionCalculationServiceImplTest {
 		Assert.assertEquals(money(12750.0), commission.getValue());
 
 	}
+	
+	/**
+	 * Edge case 1
+	 */
 
+	@Test
+	public void test_example_4() {
+		RangeDao rangeDao = mock(RangeDao.class);
+		when(rangeDao.findRangeByAchievement(99.98)).thenReturn(Range.create(3.0, 99.99, 3.0, 0.0));
+
+		CommissionCalculationService service = new CommissionCalculationServiceImpl(rangeDao);
+
+		Commission commission = service.calculateCommission(Request.create(9998, 100, 5000.0));
+		Assert.assertEquals(money(15000.0), commission.getValue());
+	}
+	
 	private final BigDecimal money(double value) {
 		return BigDecimal.valueOf(value).setScale(2);
 	}

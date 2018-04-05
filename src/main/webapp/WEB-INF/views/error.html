@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Commission Calculation Error</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Error</h1>
+	<p>Your commission could not be calculated.</p>
+	<p th:text="'error messsage: ' + ${error.message}" />
+	
+	
+	<a href="/">Do another calculation</a>
+</body>
+</html>

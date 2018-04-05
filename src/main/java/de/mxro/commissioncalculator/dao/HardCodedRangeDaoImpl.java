@@ -2,6 +2,7 @@ package de.mxro.commissioncalculator.dao;
 
 import java.math.BigDecimal;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import de.mxro.commissioncalculator.model.domain.Range;
@@ -14,6 +15,7 @@ import de.mxro.commissioncalculator.model.domain.Range;
  *
  */
 @Repository
+@Qualifier("hardCoded")
 public class HardCodedRangeDaoImpl implements RangeDao {
 
 	@Override
