@@ -2,7 +2,7 @@ package de.mxro.commissioncalculator.dao;
 
 import java.math.BigDecimal;
 
-import de.mxro.commissioncalculator.model.Range;
+import de.mxro.commissioncalculator.model.domain.Range;
 
 public interface RangeDao {
 	

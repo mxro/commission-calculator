@@ -1,9 +1,8 @@
-package de.mxro.commissioncalculator.model;
+package de.mxro.commissioncalculator.model.domain;
 
 import java.math.BigDecimal;
 
 public class Commission {
-	
 	private BigDecimal value;
 
 	public BigDecimal getValue() {
@@ -13,5 +12,4 @@ public class Commission {
 	public void setValue(BigDecimal value) {
 		this.value = value;
 	}
-	
 }

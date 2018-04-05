@@ -1,7 +1,7 @@
 package de.mxro.commissioncalculator.service;
 
-import de.mxro.commissioncalculator.model.Commission;
-import de.mxro.commissioncalculator.model.Request;
+import de.mxro.commissioncalculator.model.domain.Commission;
+import de.mxro.commissioncalculator.model.domain.Request;
 
 public interface CommissionCalculationService {
 	

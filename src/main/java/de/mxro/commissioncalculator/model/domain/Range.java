@@ -1,4 +1,4 @@
-package de.mxro.commissioncalculator.model;
+package de.mxro.commissioncalculator.model.domain;
 
 import java.math.BigDecimal;
 

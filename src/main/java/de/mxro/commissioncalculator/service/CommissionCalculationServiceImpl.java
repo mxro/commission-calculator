@@ -2,13 +2,12 @@ package de.mxro.commissioncalculator.service;
 
 import java.math.BigDecimal;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import de.mxro.commissioncalculator.dao.RangeDao;
-import de.mxro.commissioncalculator.model.Commission;
-import de.mxro.commissioncalculator.model.Range;
-import de.mxro.commissioncalculator.model.Request;
+import de.mxro.commissioncalculator.model.domain.Commission;
+import de.mxro.commissioncalculator.model.domain.Range;
+import de.mxro.commissioncalculator.model.domain.Request;
 
 @Service("commissionCalculationService")
 public class CommissionCalculationServiceImpl implements CommissionCalculationService {

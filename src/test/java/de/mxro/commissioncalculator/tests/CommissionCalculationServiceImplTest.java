@@ -13,9 +13,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import de.mxro.commissioncalculator.config.AppConfig;
 import de.mxro.commissioncalculator.dao.RangeDao;
-import de.mxro.commissioncalculator.model.Commission;
-import de.mxro.commissioncalculator.model.Range;
-import de.mxro.commissioncalculator.model.Request;
+import de.mxro.commissioncalculator.model.domain.Commission;
+import de.mxro.commissioncalculator.model.domain.Range;
+import de.mxro.commissioncalculator.model.domain.Request;
 import de.mxro.commissioncalculator.service.CommissionCalculationService;
 import de.mxro.commissioncalculator.service.CommissionCalculationServiceImpl;
 

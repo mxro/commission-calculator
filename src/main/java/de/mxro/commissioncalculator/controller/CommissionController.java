@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import de.mxro.commissioncalculator.model.Request;
+import de.mxro.commissioncalculator.model.domain.Request;
+import de.mxro.commissioncalculator.model.view.RequestView;
 import de.mxro.commissioncalculator.service.CommissionCalculationService;
 
 @Controller
@@ -20,13 +21,18 @@ public class CommissionController {
 	@GetMapping("/")
 	public String index(Model model) {
 
-		model.addAttribute("request", new Request());
+		model.addAttribute("request", new RequestView());
 		return "index";
 	}
 
 	@PostMapping("/calculate")
-	public String calculate(@ModelAttribute Request request, BindingResult result, Model model) {
+	public String calculate(@ModelAttribute RequestView requestView, BindingResult result, Model model) {
 
+		Request request = new Request();
+		request.setActual(requestView.getActual());
+		request.setTarget(requestView.getTarget());
+		request.setMotc(request.getMotc());
+		
 		model.addAttribute(service.calculateCommission(request));
 
 		return "result";

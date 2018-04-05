@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 import org.springframework.stereotype.Repository;
 
-import de.mxro.commissioncalculator.model.Range;
+import de.mxro.commissioncalculator.model.domain.Range;
 
 /**
  * <p>A hard coded DAO which provides the values required.
