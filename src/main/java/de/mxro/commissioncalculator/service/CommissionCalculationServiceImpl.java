@@ -13,14 +13,13 @@ import de.mxro.commissioncalculator.model.Request;
 @Service("commissionCalculationService")
 public class CommissionCalculationServiceImpl implements CommissionCalculationService {
 
-	@Autowired
 	RangeDao range;
 
 	@Override
 	public Commission calculateCommission(Request request) {
 
 		double achievement = (double) request.getActual() / (double) request.getTarget();
-
+		
 		Range matchingRange = range.findRangeByAchievement(achievement);
 		
 		
@@ -43,4 +42,13 @@ public class CommissionCalculationServiceImpl implements CommissionCalculationSe
 
 		return commission;
 	}
+
+	public CommissionCalculationServiceImpl(RangeDao range) {
+		super();
+		this.range = range;
+	}
+	
+	
+	
+	
 }
