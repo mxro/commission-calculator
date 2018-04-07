@@ -1,5 +1,5 @@
 /**
- * <p>Domain model
+ * <p>The domain models used for this application.
  * 
  * @author Max
  *

@@ -1,4 +1,5 @@
 /**
+ * <p>Bootstrapping/configuration for this application.
  * @author Max
  *
  */

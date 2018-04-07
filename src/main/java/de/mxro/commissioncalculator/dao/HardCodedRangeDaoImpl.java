@@ -9,7 +9,6 @@ import de.mxro.commissioncalculator.model.domain.Range;
 
 /**
  * <p>A hard coded DAO which provides the values required.
- * <p>Ideally this should be obtained from a database.
  * 
  * @author Max
  *

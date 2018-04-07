@@ -8,9 +8,15 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import de.mxro.commissioncalculator.config.AppConfig;
+import de.mxro.commissioncalculator.dao.HSQLRangeDaoImpl;
 import de.mxro.commissioncalculator.dao.RangeDao;
 import de.mxro.commissioncalculator.model.domain.Range;
 
+/**
+ * Tests for {@link HSQLRangeDaoImpl}
+ * @author Max
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { AppConfig.class })
 public class HSQLRangeDoaImplTest {

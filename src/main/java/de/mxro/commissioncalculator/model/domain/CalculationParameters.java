@@ -2,10 +2,27 @@ package de.mxro.commissioncalculator.model.domain;
 
 import java.math.BigDecimal;
 
-public class Request {
+/**
+ * <p>The parameters required to perform a commission calculation.
+ * 
+ * @author Max
+ *
+ */
+public class CalculationParameters {
 
+	/**
+	 * The target number of sales expected of an agent.
+	 */
 	private int target;
+	
+	/**
+	 * The actual number of sales an agent performed.
+	 */
 	private int actual;
+	
+	/**
+	 * The amount the sales person gets paid if the target is met (Monthly On-Target Commission).
+	 */
 	private BigDecimal motc;
 
 	public int getTarget() {
@@ -32,8 +49,8 @@ public class Request {
 		this.motc = motc;
 	}
 		
-	public static Request create(int actual, int target, double motc) {
-		Request request = new Request();
+	public static CalculationParameters create(int actual, int target, double motc) {
+		CalculationParameters request = new CalculationParameters();
 		request.actual = actual;
 		request.target = target;
 		request.motc = BigDecimal.valueOf(motc);
@@ -42,7 +59,7 @@ public class Request {
 
 	@Override
 	public String toString() {
-		return "Request [target=" + target + ", actual=" + actual + ", motc=" + motc + "]";
+		return "CalculationParameters [target=" + target + ", actual=" + actual + ", motc=" + motc + "]";
 	}
 	
 	

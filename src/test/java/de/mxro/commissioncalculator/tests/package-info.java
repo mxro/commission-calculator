@@ -1,4 +1,5 @@
 /**
+ * <p>Unit tests for the application.
  * @author Max
  *
  */

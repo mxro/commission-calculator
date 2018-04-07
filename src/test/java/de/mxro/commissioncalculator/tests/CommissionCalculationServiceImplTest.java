@@ -15,10 +15,15 @@ import de.mxro.commissioncalculator.config.AppConfig;
 import de.mxro.commissioncalculator.dao.RangeDao;
 import de.mxro.commissioncalculator.model.domain.Commission;
 import de.mxro.commissioncalculator.model.domain.Range;
-import de.mxro.commissioncalculator.model.domain.Request;
+import de.mxro.commissioncalculator.model.domain.CalculationParameters;
 import de.mxro.commissioncalculator.service.CommissionCalculationService;
 import de.mxro.commissioncalculator.service.CommissionCalculationServiceImpl;
 
+/**
+ * Tests for the class {@link CommissionCalculationServiceImpl}
+ * @author Max
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { AppConfig.class })
 public class CommissionCalculationServiceImplTest {
@@ -33,7 +38,7 @@ public class CommissionCalculationServiceImplTest {
 
 		CommissionCalculationService service = new CommissionCalculationServiceImpl(rangeDao);
 
-		Commission commission = service.calculateCommission(Request.create(79, 100, 5000.0));
+		Commission commission = service.calculateCommission(CalculationParameters.create(79, 100, 5000.0));
 		Assert.assertEquals(money(0.0), commission.getValue());
 
 	}
@@ -48,7 +53,7 @@ public class CommissionCalculationServiceImplTest {
 
 		CommissionCalculationService service = new CommissionCalculationServiceImpl(rangeDao);
 
-		Commission commission = service.calculateCommission(Request.create(100, 100, 5000.0));
+		Commission commission = service.calculateCommission(CalculationParameters.create(100, 100, 5000.0));
 		Assert.assertEquals(money(5000.0), commission.getValue());
 
 	}
@@ -63,7 +68,7 @@ public class CommissionCalculationServiceImplTest {
 
 		CommissionCalculationService service = new CommissionCalculationServiceImpl(rangeDao);
 
-		Commission commission = service.calculateCommission(Request.create(210, 100, 5000.0));
+		Commission commission = service.calculateCommission(CalculationParameters.create(210, 100, 5000.0));
 		Assert.assertEquals(money(12750.0), commission.getValue());
 
 	}
@@ -71,7 +76,6 @@ public class CommissionCalculationServiceImplTest {
 	/**
 	 * Edge case 1
 	 */
-
 	@Test
 	public void test_example_4() {
 		RangeDao rangeDao = mock(RangeDao.class);
@@ -79,7 +83,7 @@ public class CommissionCalculationServiceImplTest {
 
 		CommissionCalculationService service = new CommissionCalculationServiceImpl(rangeDao);
 
-		Commission commission = service.calculateCommission(Request.create(9998, 100, 5000.0));
+		Commission commission = service.calculateCommission(CalculationParameters.create(9998, 100, 5000.0));
 		Assert.assertEquals(money(15000.0), commission.getValue());
 	}
 	

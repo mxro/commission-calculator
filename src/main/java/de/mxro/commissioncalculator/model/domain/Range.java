@@ -2,20 +2,46 @@ package de.mxro.commissioncalculator.model.domain;
 
 import java.math.BigDecimal;
 
+/**
+ * <p>
+ * Provides the base and rate for calculating commissions within a set start and
+ * end achievement interval.
+ * 
+ * @author Max
+ *
+ */
 public class Range {
 
-	// for later, when this is mapped to db
-	private String rangeId;
+	/**
+	 * ID currently not used
+	 */
+	private int rangeId;
+	
+	/**
+	 * The lowest achievement value from which this range becomes valid.
+	 */
 	private BigDecimal start;
+	
+	/**
+	 * The highest achievement value for which this range is still valid.
+	 */
 	private BigDecimal end;
+	
+	/**
+	 * The base percentage of what agents are paid of their MOTC if they fall within the specified achievement range.
+	 */
 	private BigDecimal base;
+	
+	/**
+	 * The rate at which over-achievement scales to a higher payout of the base MOTC.  
+	 */
 	private BigDecimal rate;
 
-	public String getRangeId() {
+	public int getRangeId() {
 		return rangeId;
 	}
 
-	public void setRangeId(String rangeId) {
+	public void setRangeId(int rangeId) {
 		this.rangeId = rangeId;
 	}
 
@@ -111,7 +137,5 @@ public class Range {
 	public String toString() {
 		return "Range [start=" + start + ", end=" + end + ", base=" + base + ", rate=" + rate + "]";
 	}
-
-	
 
 }

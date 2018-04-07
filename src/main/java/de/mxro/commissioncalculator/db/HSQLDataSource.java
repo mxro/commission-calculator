@@ -8,6 +8,14 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 
+/**
+ * <p>A simple Hyper SQL embedded data source used for this project
+ * <p>Data is initialized during application startup by applying the SQL specified
+ * in src/main/resources/sql/create-db.sql and src/main/resources/sql/insert-data.sql
+ * 
+ * @author Max
+ *
+ */
 @Configuration
 public class HSQLDataSource {
 

@@ -16,6 +16,12 @@ import org.springframework.stereotype.Repository;
 
 import de.mxro.commissioncalculator.model.domain.Range;
 
+/**
+ * <p>Obtains values for a specific range from an embedded HSQL database.
+ * 
+ * @author Max
+ *
+ */
 @Repository
 @Qualifier("hsql")
 public class HSQLRangeDaoImpl implements RangeDao {
@@ -38,7 +44,7 @@ public class HSQLRangeDaoImpl implements RangeDao {
 	}
 
 	private static final class RangeMapper implements RowMapper<Range> {
-
+		
 		public Range mapRow(ResultSet rs, int rowNum) throws SQLException {
 			return Range.create(rs.getDouble("start"), rs.getDouble("end"), rs.getDouble("base"), rs.getDouble("rate"));
 

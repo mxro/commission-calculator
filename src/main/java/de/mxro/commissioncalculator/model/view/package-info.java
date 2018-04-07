@@ -1,5 +1,7 @@
 /**
- * View models
+ * <p>
+ * The view models used by this application.
+ * 
  * @author Max
  *
  */

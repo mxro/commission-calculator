@@ -1,4 +1,5 @@
 /**
+ * <p>Root package for commission calculator app.
  * @author Max
  *
  */

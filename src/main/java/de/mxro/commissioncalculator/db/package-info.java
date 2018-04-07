@@ -1,4 +1,5 @@
 /**
+ * <p>The database management classes for this application.
  * @author Max
  *
  */

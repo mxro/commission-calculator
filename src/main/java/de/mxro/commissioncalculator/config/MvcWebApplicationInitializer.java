@@ -2,6 +2,11 @@ package de.mxro.commissioncalculator.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+/**
+ * <p>Entry point for bootstrapping web server.
+ * @author Max
+ *
+ */
 public class MvcWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
    @Override
