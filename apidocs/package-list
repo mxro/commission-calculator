@@ -1,0 +1,9 @@
+de.mxro.commissioncalculator
+de.mxro.commissioncalculator.config
+de.mxro.commissioncalculator.controller
+de.mxro.commissioncalculator.dao
+de.mxro.commissioncalculator.db
+de.mxro.commissioncalculator.model
+de.mxro.commissioncalculator.model.domain
+de.mxro.commissioncalculator.model.view
+de.mxro.commissioncalculator.service
