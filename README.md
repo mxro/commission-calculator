@@ -4,7 +4,11 @@
 
 # commission-calculator
 
-A web-based calculator for commissions.
+A web-based calculator for commissions implemented using Spring 5.
+
+The Maven site for this project is available here:
+
+[]()
 
 ## Environment
 
@@ -35,6 +39,14 @@ To launch the application using an embedded Jetty server:
 
 ```
 mvn jetty:run
+```
+
+## Maven Site
+
+This project can generate a Maven site and upload it automatically to GitHub pages. This requires that a valid `github` server is defined in the Maven settings.
+
+```
+mvn site
 ```
 
 ## Deployment
