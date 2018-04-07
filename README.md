@@ -8,7 +8,7 @@ A web-based calculator for commissions implemented using Spring 5.
 
 The Maven site for this project is available here:
 
-[]()
+[https://mxro.github.io/commission-calculator/](https://mxro.github.io/commission-calculator/)
 
 ## Environment
 
