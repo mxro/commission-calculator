@@ -51,5 +51,5 @@ mvn site
 
 ## Deployment
 
-Building this application using `mvn package` will yield in the creation for a war file in the `target/` folder. This folder can be deployed on Jetty/Tomcat etc. servers.
+Building this application using `mvn package` will yield in the creation for a war file in the `target/` folder. This war file can be deployed on Jetty/Tomcat etc. servers.
 
