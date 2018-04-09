@@ -68,6 +68,8 @@ public class CommissionController {
 		// doing a very simple validation of input parameters
 		if (parametersView.getActual() <= 0 || parametersView.getTarget() <= 0
 				|| parametersView.getTarget() < parametersView.getActual()
+				|| parametersView.getMotc().doubleValue() < 0
+				|| parametersView.getMotc().doubleValue() >= 10000
 				|| (double) parametersView.getActual() / (double) parametersView.getTarget() > 99.99) {
 			return showError(model, "Invalid values provided.");
 		}
