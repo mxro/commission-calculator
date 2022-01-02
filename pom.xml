@@ -24,7 +24,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>5.2.15.RELEASE</version>
+			<version>5.2.18.RELEASE</version>
 		</dependency>
 		
 		<dependency>
@@ -56,7 +56,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>5.0.5.RELEASE</version>
+			<version>5.2.18.RELEASE</version>
 		</dependency>
 
 
